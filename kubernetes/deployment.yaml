@@ -17,3 +17,4 @@ spec:
         image: gobigs07/node-k8s-app:latest
         ports:
         - containerPort: 3001
+
