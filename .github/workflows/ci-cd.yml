@@ -43,7 +43,7 @@ jobs:
         mkdir -p $HOME/.kube
         echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > $HOME/.kube/config
 
-    - name: Deploy to Kubernetes (Minikube)
+    - name: Deploy to Kubernetes (Skip Validation)
       run: |
         kubectl apply -f kubernetes/deployment.yaml
         kubectl apply -f kubernetes/service.yaml
